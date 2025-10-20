@@ -1,0 +1,28 @@
+Sensor Data Ingestion & Quality Pipeline
+Overview
+
+This repository contains a Python-based ETL pipeline to ingest, clean, transform, and validate IoT sensor data stored in Parquet files. The pipeline ensures high-quality, standardized data and generates a detailed Data Quality Report.
+
+The workflow is structured in three main stages:
+
+Data Ingestion: Read raw Parquet files, validate schema, deduplicate, and save cleaned files.
+
+Data Cleaning & Transformation: Handle missing values, outliers, apply calibration, and compute derived metrics like rolling averages.
+
+Data Quality Validation: Run schema checks, detect anomalies, identify missing data, gaps, and generate a comprehensive report using DuckDB.
+
+Repository Structure
+project_root/
+├─ src/
+│  ├─ ingestion.py       # Data ingestion script
+│  ├─ transform.py       # Data transform script
+│  ├─ validate.py        # Data validation script
+│  ├─ loader.py          # Data loader & partitioner
+├─ tests/
+│  ├─ test_ingestion.py         # Pytest for ingestion
+│  ├─ test_transformation.py    # Pytest for transformation
+│  ├─ test_validation.py        # Pytest for validation
+│  ├─ test_loader.py            # Pytest for loader
+├─ pipeline.py
+├─ Dockerfile
+├─ README.md
