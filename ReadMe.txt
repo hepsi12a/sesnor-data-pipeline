@@ -25,7 +25,7 @@ Python 3.9+ is installed.
 
 Install required packages:
 
-```pip install -r requirements.txt```
+pip install -r requirements.txt
 
 3. Run the pipeline from pipeline.py 
 
@@ -53,7 +53,7 @@ Test file: tests/test_validation.py
 
 Command to run all test cases:
 
-```pytest -v```
+pytest -v
 
 
 Checks performed by test:
@@ -65,9 +65,10 @@ Data quality report is generated correctly.
 
 COMMANDS TO RUN:
 
-```docker build --no-cache -t data-pipeline:v2 .```
-```docker run -it data-pipeline:v2```
+docker build --no-cache -t data-pipeline:v2 .
+docker run -it data-pipeline:v2
 
 command to run test cases:
- ```pytest -v```
+ pytest -v
+
 
